@@ -11,13 +11,13 @@ spring:
     ansi:
       enabled: detect
   r2dbc:
-    url: r2dbc:h2:file:///${halo.work-dir}/db/halo-next?MODE=MySQL&DB_CLOSE_ON_EXIT=FALSE
-    username: admin
+    url: r2dbc:mysql://127.0.0.1:3306/halo?useSSL=false
+    username: root
     password: 123456
   sql:
     init:
       mode: always
-      platform: h2
+      platform: mysql
   codec:
     max-in-memory-size: 10MB
   messages:
@@ -39,7 +39,7 @@ spring:
       enabled: true
 
 halo:
-  work-dir: ${user.home}/.halo2
+  work-dir: C:\dev\storage\halo2
   attachment:
     resource-mappings:
       - pathPattern: /upload/**

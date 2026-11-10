@@ -18,6 +18,7 @@ halo:
   security:
     basic-auth:
       disabled: false
+
   console:
     proxy:
       endpoint: http://localhost:3000/
@@ -28,7 +29,7 @@ halo:
       enabled: true
   plugin:
     runtime-mode: development # development, deployment
-  work-dir: ${user.home}/halo2-dev
+  work-dir: C:\dev\storage\halo2
 logging:
   level:
     run.halo.app: DEBUG
